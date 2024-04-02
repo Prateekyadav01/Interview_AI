@@ -3,10 +3,18 @@
 let skillsData = document.getElementById('skills_dsp');
 let uniqueData = document.getElementById('unique');
 let anchor_Job = document.getElementById('anchor_Job');
+let projectId = document.getElementById('projectId');
+
 
 uniqueData.addEventListener('input', function(e){
     console.log(e.target.value);
     anchor_Job.href= `../resume/jobs.html?search=${e.target.value}`;
+    
+
+    projectId.addEventListener('click',function(e){
+        console.log(e.target.value);
+        anchor_Job.href= `../resume/Project.html?search=${e.target.value}`;
+    })
 })
 
 

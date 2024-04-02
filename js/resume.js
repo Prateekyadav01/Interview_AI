@@ -191,6 +191,8 @@ const showListData = (listData, listContainer) => {
 
         listContainer.appendChild(itemElem);
     })
+
+    console.log(listData);
 }
 
 const displayCV = (userData) => {
@@ -208,12 +210,22 @@ const displayCV = (userData) => {
 }
 
 // generate CV
+let skillDataDisplay=[];
+let arr=[];
 const generateCV = () => {
     let userData = getUserInputs();
     displayCV(userData);
     console.log(userData);
+    if (userData && userData.skills && Array.isArray(userData.skills)) {
+        skillDataDisplay = userData.skills.map(skill => skill.skill);
+        // arr.push(skillDataDisplay);
+        console.log(skillDataDisplay);
+    } else {
+        console.error("Invalid user data or missing skills array");
+    }
 }
-
+// console.log(skillDataDisplay)
+// console.log(userData.skill)
 function previewImage(){
     let oFReader = new FileReader();
     oFReader.readAsDataURL(imageElem.files[0]);

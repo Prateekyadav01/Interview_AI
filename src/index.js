@@ -49,25 +49,3 @@
 
 // a();
 
-
-const url = 'https://jsearch.p.rapidapi.com/search?query=Python%20developer%20in%20Texas%2C%20USA&page=1&num_pages=1';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '5fb769ce55msh7a0078af2e4d4b6p107e23jsn93d400fe3a10',
-		'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
-	}
-};
-
-
-async function a(){
-	try {
-		const response = await fetch(url, options);
-		const result = await response.json();
-		console.log(result);
-	} catch (error) {
-		console.error(error);
-	}
-}
-
-a();

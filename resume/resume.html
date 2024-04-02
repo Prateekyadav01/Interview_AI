@@ -275,7 +275,7 @@
                                         <div class = "cv-form-row cv-form-row-skills">
                                             <div class = "form-elem">
                                                 <label for = "" class = "form-label">Skill</label>
-                                                <input name = "skill" type = "text" class = "form-control skill" id = "" onkeyup="generateCV()">
+                                                <input name = "skill" type = "text" class = "form-control skill" id = "unique" onkeyup="generateCV()">
                                                 <span class="form-text"></span>
                                             </div>
                                             
@@ -374,7 +374,9 @@
             <div class = "container1">
                 <button type = "button" class = "print-btn btn btn-primary" onclick="printCV()">Print CV</button>
                 <button type = "button" class = "print-btn btn btn-primary" onclick="downloadCode()">Download</button>
-                <button type = "button" class = "print-btn btn btn-primary" onclick="printCV()">Jobs CV</button>
+               <a href="" id="anchor_Job">
+                <button type = "button" class = "print-btn btn btn-primary" onclick="callingJobs()">Jobs CV</button>
+               </a>
                 <button type = "button" class = "print-btn btn btn-primary" onclick="printCV()">Project CV</button>
             </div>
         </section>
@@ -393,7 +395,7 @@
         
         <script src="../js/resume.js"></script>
          
-
+         <script src="../js/jobSearch.js"></script>
         <script src="../js/download.js"></script>
 
 

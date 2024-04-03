@@ -30,7 +30,7 @@ function hideLoader(){
 }
 function all(){
     async function run() {
-        showLoader();
+        // showLoader();
         // adding style to displayContainer
       displayContainer.style.alignItems = "start";
     
@@ -87,7 +87,7 @@ function all(){
     //--------auto scroll to the current div
        divBotheight = Number(displayContainer.clientHeight) - Number(divBot.clientHeight);
         window.scrollTo(0,divBotheight );
-        hideLoader();
+        // hideLoader();
     }
     
     // search Button click event 

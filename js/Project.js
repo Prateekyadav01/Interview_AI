@@ -20,27 +20,28 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const genAI = new GoogleGenerativeAI(API_KEY);
 let divBotheight;
 
+let spinner = document.getElementsByClassName('spinner');
+function showLoader(){
+    spinner.style.display="block";
+}
+
+function hideLoader(){
+    spinner.style.display="none";
+}
 function all(){
     async function run() {
+        showLoader();
         // adding style to displayContainer
       displayContainer.style.alignItems = "start";
     
     
-      //   creating user div and attaching msg
+      
         let divUser = document.createElement("div");
-    //   divUser.style.display = "flex";
-    //   divUser.style.justifyContent = "center";
-    //   divUser.style.alignItems = "center";
-    //   divUser.style.color = "white";
-    //   divUser.style.backgroundColor = "rgb(30,31,32)";  
-    //   divUser.innerText = searchBox.value;
-    //   divUser.style.padding = "10px 20px";
+
          divUser.style.marginTop = "5px";
-    //   divUser.style.borderRadius = "10px";
-    //   divUser.classList.add("animate__animated", "animate__bounceIn");
         divUser.classList.add("flex", "gap-4");
         divUser.innerHTML = `
-        <img class="w-[30px] h-[30px] rounded-full hover:cursor-pointer" src="passport size.png" alt="" sizes="" srcset="">
+        <img class="w-[30px] h-[30px] rounded-full hover:cursor-pointer" src="../images/Prateek_pass.JPG" alt="" sizes="" srcset="">
         <div class=" flex justify-center items-center text-white bg-[rgb(30,31,32)] px-[20px] py-[10px] rounded-lg">${searchBox.value}</div>
         `
         displayContainer.append(divUser);
@@ -78,7 +79,7 @@ function all(){
     //   divBot.style.borderRadius = "10px";
         // divBot.innerHTML = md.render(text);
         divBot.innerHTML = `
-        <img class="w-[30px] h-[30px] rounded-full hover:cursor-pointer rotate-center" src="gemini_favicon.png" alt="" sizes="" srcset="">
+        <img class="w-[30px] h-[30px] rounded-full hover:cursor-pointer rotate-center" src="../images/gemini_favicon.png" alt="" sizes="" srcset="">
         <div class=" text-white bg-[rgb(30,31,32)] px-[20px] py-[10px] rounded-lg">${md.render(text)}</div>
         `
         displayContainer.append(divBot);
@@ -86,6 +87,7 @@ function all(){
     //--------auto scroll to the current div
        divBotheight = Number(displayContainer.clientHeight) - Number(divBot.clientHeight);
         window.scrollTo(0,divBotheight );
+        hideLoader();
     }
     
     // search Button click event 

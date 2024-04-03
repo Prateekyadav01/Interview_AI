@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemini</title>
     <link rel="shortcut icon" href="../images/gemini_favicon.png" type="image/x-icon">
-    <style>
+    <link rel="stylesheet" href="../css/spinner.css">
+   <style>
         .hide-scrollbar::-webkit-scrollbar {
              display: none;
         }
@@ -53,49 +54,45 @@
 </head>
 <body class="bg-black ">
     <!-- left-header -->
-  <div id="left_header_container" class="px-3 z-10 hidden md:flex flex-col duration-1000 transition-all justify-between  text-white py-6 fixed top-0 left-0 w-[172px] h-[100vh] bg-[rgb(30,31,32)] hover:cursor-pointer">
+    <div id="left_header_container" class="px-3 z-10 hidden md:flex flex-col duration-1000 transition-all justify-between text-white py-6 fixed top-0 left-0 w-[172px] h-[100vh] bg-[#2C3E50] hover:cursor-pointer">
+
+        <!-- Navigation Items -->
+        <div class="flex flex-col gap-6">
     
-        <div class="flex flex-col">
-            <!--Hamburger icon  -->
+            <!-- Hamburger Icon -->
             <div class="w-full">
-                <span id="left_header" class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full hover:bg-[rgb(68,71,70)] ">
+                <span id="left_header" class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full hover:bg-[#34495E]">
                     menu
                 </span>
+            </div>
     
+            <!-- Add New Chat -->
+            <div class="flex gap-2 text-[14px] rounded-full bg-[#34495E] hover:cursor-pointer p-[10px] hover:bg-[#34495E]">
+                <span class="material-symbols-outlined">add</span>
+                <span class="wider_left_header_content">New chat</span>
             </div>
-        <!-- plus icon -->
-            <div class="flex gap-2 
-              text-[14px] mt-[60px] rounded-full bg-[rgb(40,42,44)]  hover:cursor-pointer p-[10px] ">
-                <span class=" material-symbols-outlined ">
-                    add
-                </span>
-                <span class="  wider_left_header_content">New chat</span>
+    
+            <!-- Help -->
+            <div class="flex items-center hover:cursor-pointer hover:bg-[#34495E] rounded-3xl">
+                <span class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full">help</span>
+                <span class="p-[10px] wider_left_header_content">Help</span>
             </div>
+    
+            <!-- Activity -->
+            <div class="flex items-center hover:cursor-pointer hover:bg-[#34495E] rounded-3xl">
+                <span class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full">history</span>
+                <span class="p-[10px] wider_left_header_content">Activity</span>
+            </div>
+    
+            <!-- Settings -->
+            <div class="flex items-center hover:cursor-pointer hover:bg-[#34495E] rounded-3xl">
+                <span class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full">settings</span>
+                <span class="p-[10px] wider_left_header_content">Settings</span>
+            </div>
+    
         </div>
-        
-    <div class="flex flex-col gap-0">
-     <!-- Help icon -->
-       <div class="flex  items-center hover:cursor-pointer hover:bg-[rgb(68,71,70)] rounded-3xl ">     
-            <span class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full ">
-                 help
-            </span>
-            <span class="p-[10px] wider_left_header_content ">Help</span>
-        </div>    
-      <!-- History icon -->
-        <div class="flex  items-center hover:cursor-pointer hover:bg-[rgb(68,71,70)] rounded-3xl ">
-                <span class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full hover:bg-[rgb(68,71,70)]">
-                    history
-                </span>
-                <span class="p-[10px] wider_left_header_content ">Activity</span>
-            </div>    
-            <!-- settings icon -->
-            <div class="flex  items-center hover:cursor-pointer hover:bg-[rgb(68,71,70)] rounded-3xl ">
-                <span class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full hover:bg-[rgb(68,71,70)]">
-                    settings
-                </span><span class="p-[10px] wider_left_header_content ">Settings</span>
-            </div>
     </div>
-  </div>
+    
   <!-- right part -->
   <div id="right" class="w-[88%] fixed right-0 z-10 h-[100vh]">
         <!-- top header -->
@@ -144,7 +141,7 @@
                 background: linear-gradient(to right, #5082EE 0%, #A66FBA 50%, #D66675 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;">Welcome to Prateek's gemini</h1>
-                <h1 class="text-[rgb(68,71,70)] text-6xl font-semibold">How can I help you today?</h1>
+                <h1 class="text-[rgb(68,71,70)] text-6xl font-semibold">Here are the Project related to you skills</h1>
                 <div class="w-full flex gap-3 my-10 overflow-x-auto hide-scrollbar">
                     <div class="rounded-2xl relative min-w-[200px] h-[200px] bg-[rgb(59,68,86)] px-3 py-3 hover:cursor-pointer">
                         Help me find the latest trends
@@ -152,6 +149,7 @@
                             <img class="h-[25px] w-[25px] rounded-full" src="../images/svg2.png" alt="">
                         </div>
                     </div>
+                    <div class="spinner"></div>
                     <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)] px-3 py-3 hover:bg-[rgb(68,71,70)] hover:cursor-pointer">
                         Help me write a refund email for a product that&apos;s damaged
                     </div>

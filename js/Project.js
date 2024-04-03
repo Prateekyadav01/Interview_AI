@@ -182,7 +182,7 @@ function all(){
     //     // console.log(files);
     // })
     
-    
+    run();    
 }
 
 all();

@@ -38,7 +38,7 @@ function callingJobs() {
             }
             let header1 = document.createElement('h1');
             header1.classList.add('job-title');
-            header1.textContent = `Their are the jobs related to ${searchParam}`
+            header1.textContent = `Their are the jobs related to Your Skills`
             jobMain.appendChild(header1);
 
             result.data.forEach(dataEntry => {

@@ -4,17 +4,15 @@ This is a simple resume project built using HTML, CSS, and JavaScript.
 
 # Project Description
 This project is a web-based resume that showcases your skills, experiences, and contact information. It is built using standard web technologies: HTML for structure, CSS for styling, and JavaScript for interactivity.
+You can also see the Job suggestion related to your skills
+and also you can see the project suggestion you can make the project by using your skills
 
 # Tech Stack
 HTML: Used for creating the structure and content of the resume.
 CSS: Used for styling the resume to make it visually appealing and responsive.
 JavaScript: Used for adding interactivity, such as handling user events and form submissions.
 Project Structure
-The project structure is organized as follows:
 
-index.html: The main HTML file that contains the structure of the resume.
-style.css: The CSS file that styles the HTML elements to create a visually appealing layout.
-script.js: The JavaScript file that adds interactivity to the resume, such as form validation or dynamic content loading.
 # Usage
 To use the resume project:
 

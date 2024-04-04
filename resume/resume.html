@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
         <link rel="stylesheet" href="../css/resume.css">
     </head>
@@ -16,15 +17,16 @@
                 <div class = "navbar-content">
                     <div class = "brand-and-toggler">
                         <a href = "../src/index.html" class = "navbar-brand">
-                            <img src = "assets/images/curriculum-vitae.png" alt = "" class = "navbar-brand-icon">
+                            <img src = "../images/logo.jpg" alt = "" class = "navbar-brand-icon">
                             <span class = "navbar-brand-text">build <span>resume.</span>
                         </a>
-                        <button type = "button" class = "navbar-toggler-btn">
-                            <div class = "bars">
+                        <button type = "button" class = "navbar-toggler-btn" id="logout">
+                            logout
+                            <!-- <div class = "bars">
                                 <div class = "bar"></div>
                                 <div class = "bar"></div>
                                 <div class = "bar"></div>
-                            </div>
+                            </div> -->
                         </button>
                     </div>
                 </div>
@@ -48,12 +50,12 @@
                                     </div>
                                     <div class = "form-elem">
                                         <label for = "" class = "form-label">Middle Name <span class = "opt-text">(optional)</span></label>
-                                        <input name = "middlename" type = "text" class = "form-control middlename" id = "" onkeyup="generateCV()" placeholder="e.g. Herbert">
+                                        <input name = "middlename" type = "text" class = "form-control middlename" id = "" onkeyup="generateCV()" placeholder="e.g. middle">
                                         <span class="form-text"></span>
                                     </div>
                                     <div class = "form-elem">
                                         <label for = "" class = "form-label">Last Name</label>
-                                        <input name = "lastname" type = "text" class = "form-control lastname" id = "" onkeyup="generateCV()" placeholder="e.g. Doe">
+                                        <input name = "lastname" type = "text" class = "form-control lastname" id = "" onkeyup="generateCV()" placeholder="e.g. Yadav">
                                         <span class="form-text"></span>
                                     </div>
                                 </div>
@@ -65,12 +67,12 @@
                                     </div>
                                     <div class = "form-elem">
                                         <label for = "" class = "form-label">Designation</label>
-                                        <input name = "designation" type = "text" class = "form-control designation" id = "" onkeyup="generateCV()" placeholder="e.g. Sr.Accountants">
+                                        <input name = "designation" type = "text" class = "form-control designation" id = "" onkeyup="generateCV()" placeholder="e.g. Er">
                                         <span class="form-text"></span>
                                     </div>
                                     <div class = "form-elem">
                                         <label for = "" class = "form-label">Address</label>
-                                        <input name = "address" type = "text" class = "form-control address" id = "" onkeyup="generateCV()" placeholder="e.g. Lake Street-23">
+                                        <input name = "address" type = "text" class = "form-control address" id = "" onkeyup="generateCV()" placeholder="e.g. UP">
                                         <span class="form-text"></span>
                                     </div>
                                 </div>
@@ -78,17 +80,17 @@
                                 <div class = "cols-3">
                                     <div class = "form-elem">
                                         <label for = "" class = "form-label">Email</label>
-                                        <input name = "email" type = "text" class = "form-control email" id = "" onkeyup="generateCV()" placeholder="e.g. johndoe@gmail.com">
+                                        <input name = "email" type = "text" class = "form-control email" id = "" onkeyup="generateCV()" placeholder="e.g. @gmail.com">
                                         <span class="form-text"></span>
                                     </div>
                                     <div class = "form-elem">
                                         <label for = "" class = "form-label">Phone No:</label>
-                                        <input name = "phoneno" type = "text" class = "form-control phoneno" id = "" onkeyup="generateCV()" placeholder="e.g. 456-768-798, 567.654.002">
+                                        <input name = "phoneno" type = "text" class = "form-control phoneno" id = "" onkeyup="generateCV()" placeholder="e.g. 515486">
                                         <span class="form-text"></span>
                                     </div>
                                     <div class = "form-elem">
                                         <label for = "" class = "form-label">Summary</label>
-                                        <input name = "summary" type = "text" class = "form-control summary" id = "" onkeyup="generateCV()" placeholder="e.g. Doe">
+                                        <input name = "summary" type = "text" class = "form-control summary" id = "" onkeyup="generateCV()" placeholder="e.g. summary">
                                         <span class="form-text"></span>
                                     </div>
                                 </div>
@@ -107,7 +109,7 @@
                                             <div class = "cols-2">
                                                 <div class = "form-elem">
                                                     <label for = "" class = "form-label">Title</label>
-                                                    <input name = "achieve_title" type = "text" class = "form-control achieve_title" id = "" onkeyup="generateCV()" placeholder="e.g. johndoe@gmail.com">
+                                                    <input name = "achieve_title" type = "text" class = "form-control achieve_title" id = "" onkeyup="generateCV()" placeholder="e.g. @gmail.com">
                                                     <span class="form-text"></span>
                                                 </div>
                                                 <div class = "form-elem">
@@ -294,7 +296,7 @@
         <section id = "preview-sc" class = "print_area">
             <div class = "container">
                 <div class = "preview-cnt">
-                    <div class = "preview-cnt-l bg-green text-white">
+                    <div class = "preview-cnt-l bg-gray-800 text-white">
                         <div class = "preview-blk">
                             <div class = "preview-image">
                                 <img src = "" alt = "" id = "image_dsp"> 

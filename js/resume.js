@@ -238,3 +238,14 @@ function previewImage(){
 function printCV(){
     window.print();
 }
+
+
+// JavaScript
+let logout = document.getElementById("logout");
+
+logout.addEventListener("click", () => {
+    
+    window.location.href = "../src/index.html";
+});
+
+
